@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In / Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Function to validate mandatory fields
+    function submitForm(event) {
+      event.preventDefault()
+      const firstName = document.getElementById('firstName').value.trim();
+      const middleName = document.getElementById('middleName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+      // Check if passwords match
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      // If validation passes, redirect to the confirmation page
+      window.location.href = `confirmation.html?name=${encodeURIComponent(firstName)}&email=${encodeURIComponent(email)}`;
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Main container to center the content -->
+  <div class="min-h-screen flex items-center justify-center">
+    <!-- Flex container for login and signup form -->
+    <div class="flex bg-white shadow-lg rounded-lg overflow-hidden w-3/4 max-w-5xl">
+
+      <!-- Left Section (Login) -->
+      <div class="w-1/2 bg-blue-500 p-8 text-white flex flex-col justify-center">
+        <h2 class="text-2xl font-bold mb-4">Welcome Back!</h2>
+        <p class="mb-6">To keep connected with us please login with your personal info</p>
+        
+        <!-- Sign in button -->
+        <a href="log_in.html">
+            <button class="bg-white text-blue-500 px-4 py-2 rounded-lg hover:bg-gray-200 transition">Sign in</button>
+        </a>
+      </div>
+
+      <!-- Right Section (Sign Up Form) -->
+      <div class="w-1/2 bg-white p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Sign Up</h2>
+        
+        <form onsubmit="submitForm(event)">
+        <!-- First Name -->
+          <input type="text" id="firstName" placeholder="First Name*" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        
+        <!-- Middle Name -->
+          <input type="text" id="middleName" placeholder="Middle Name" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        
+        <!-- Last Name -->
+          <input type="text" id="lastName" placeholder="Last Name*" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        
+        <!-- Contact Number -->
+          <input type="text" id="contact" placeholder="Contact no.*" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        
+        <!-- Email Address -->
+          <input type="email" id="email" placeholder="Email address*" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        
+        <!-- Password -->
+          <input type="password" id="password" placeholder="Password*" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        
+        <!-- Confirm Password -->
+          <input type="password" id="confirmPassword" placeholder="Confirm Password*" class="border border-gray-300 p-3 w-full rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+        
+        <!-- Sign Up Button -->
+          <button type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600 transition">Sign Up</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

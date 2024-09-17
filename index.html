@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book My Ticket</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-gray-100">
+
+        <!-- Navbar -->
+         <header class="flex justify-between items-center p-5 bg-white shadow">
+            <div class="text-2xl font-bold text-blue-500">
+                <span>BOOK MY</span>
+                <span class="test-black">TICKET</span>
+            </div>
+            <div class="flex gap-4">
+                <input type="text" placeholder="Search for movies" class="border px-4 py-2 rounded-lg">
+                <a href="log_in.html">
+                  <button class="px-4 py-2 bg-blue-500 text-white round-lg">Log in</button>
+                </a>
+                <a href="sign_up.html">
+                  <button class="px-4 py-2 bg-blue-500 text-white round-lg">Sign up</button>
+                </a>
+            </div>
+         </header>
+
+        <!-- Carousel -->
+         <section class="my-8 mx-auto w-full max-w-4xl">
+            <div class="relative">
+                <div class="overflow-hiddem">
+                    <div class="flex transition-transform transform translate-x-0">
+
+                        <!-- Carousel slide -->
+                         <div class="flex-shrink-0 w-full">
+                            <img src="https://via.placeholder.com/1280x720?text=Carousel+Image+1" alt="Carousel Image 1" class="w-full h-auto rounded-lg">
+                         </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel controls -->
+                 <button class="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-white shadow rounded-full">❮</button>
+                 <button class="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-white shadow rounded-full">❯</button>
+            </div>
+         </section>
+
+         <!-- Movie Section -->
+         <section class="my-8 max-w-6xl mx-auto">
+            <div class="mb-4">
+              <h2 class="text-xl font-bold">Now Playing</h2>
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Movie Card -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=John+Wick" alt="John Wick" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">John Wick</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=Stree+2" alt="Stree 2" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">Stree 2</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=Jab+We+Met" alt="Jab We Met" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">Jab We Met</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=The+Idea+of+You" alt="The Idea of You" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">The Idea of You</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="mb-4">
+              <h2 class="text-xl font-bold">Coming Soon</h2>
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Movie Card -->
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=John+Wick" alt="John Wick" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">John Wick</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=Stree+2" alt="Stree 2" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">Stree 2</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=Jab+We+Met" alt="Jab We Met" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">Jab We Met</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                  <img src="https://via.placeholder.com/200x300?text=Mission+Impossible" alt="Mission Impossible" class="w-full rounded-lg mb-2">
+                  <h3 class="text-lg font-bold">Mission Impossible</h3>
+                  <p class="text-sm text-gray-500">Re-usable components built using React.js and Tailwind CSS</p>
+                </div>
+              </div>
+            </div>
+          </section>
+    </body>
+
+</html>
