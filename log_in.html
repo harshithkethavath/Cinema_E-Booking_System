@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html
+    lang="en">
+
+    <head>
+        <!-- Meta Tags -->
+        <meta
+            charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, 
+                initial-scale=1.0">
+        
+        <!-- Title Tag -->
+        <title>
+            Log In Page
+        </title>
+
+        <!-- Linking Tailwind CSS output file -->
+        <link
+            href="style.css"
+            rel="stylesheet">
+    </head>
+
+    <body
+        class="bg-gray-100">
+
+        <!-- Main Container at teh center of the screen -->
+        <div
+            class="flex
+                items-center
+                justify-center
+                min-h-screen">
+            
+            <!-- Container that had Log In section and a link to Sign Up Page-->
+            <div
+                class="bg-white
+                    shadow-lg
+                    rounded-lg
+                    overflow-hidden
+                    flex
+                    w-3/4
+                    max-w-4xl">
+                
+                <!--- Login Section -->
+                <div
+                    class="w-1/2
+                        p-8">
+
+                    <h2
+                        class="text-2xl
+                        font-bold
+                        text-gray-800
+                        mb-4">
+                        Log In
+                    </h2>
+
+                    <!-- Email Input -->
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        class="border
+                            border-gray-300
+                            p-3
+                            w-full
+                            mb-4
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-400">
+
+                    <!-- Password Input -->
+                    <input
+                    type="password"
+                    placeholder="Password"
+                    class="border
+                        border-gray-300
+                        p-3
+                        w-full
+                        mb-4
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-400">
+
+                    <!-- Log In Button -->
+                    <button
+                        class="bg-blue-500
+                            text-white
+                            px-4
+                            py-2
+                            rounded-lg
+                            w-full
+                            hover:bg-blue-600
+                            trasition">
+                        Log In
+                    </button>
+
+                    <!-- Forgot Password /later should be linked ot password reset page -->
+                    <p
+                        class="mt-4
+                            text-blue-500
+                            text-center
+                            cursor-pointer
+                            hover:underline">
+                        Forgot password?
+                    </p>
+            
+                    <!-- Sign Up Option -->
+                    <p
+                        class="mt-4
+                            text-center">
+                        New to BookMyTicket?
+                        
+                        <a
+                            href="sign_up.html">
+                            <span
+                                class="text-blue-500
+                                    cursor-pointer
+                                    hover:underline">
+                                Sign Up Now    
+                            </span>
+                        </a>
+                    </p>
+
+                </div>
+
+                <!-- Sign Up Link Section -->
+                <div
+                    class="w-1/2
+                        bg-blue-500
+                        p-8
+                        text-white
+                        justify-center
+                        flex
+                        flex-col">
+
+                    <h2
+                        class="text-2xl
+                            font-bold
+                            mb-4">
+                        Hello, Cinephile!
+                    </h2>
+
+                    <p
+                        class="mb-4">
+                        Create your personalized movie experience and start your journey with us.
+                    </p>
+
+                    <a 
+                        href="sign_up.html">
+                        <button
+                            class="bg-shite
+                                text-blue-500
+                                px-4
+                                py-2
+                                rounded-lg
+                                bg-white
+                                transition
+                                self-start">
+                            Sign Up    
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
