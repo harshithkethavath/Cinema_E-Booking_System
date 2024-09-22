@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="Scripts/movies.js"></script>
+</head>
+
+<body class="min-h-screen bg-gray-100">
+
+        <!-- Navigation Bar -->
+        <header 
+            class="p-5 
+                bg-white
+                flex
+                justify-between
+                items-center">
+
+            <!-- BOOK MY TICKET logo and text -->
+            <div 
+                class="flex
+                    gap-2">
+
+                <div>
+                    <img 
+                        src="icon.png"
+                        alt="Ticket Symbol for Webpage"
+                        width="32"
+                        height="32">
+                </div>
+
+                <a href="index.html">
+                    <div
+                        class="text-blue-500
+                        text-2xl
+                        font-bold">
+                        <span>
+                            BOOK MY TICKET
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Search Box, Log In and Sign Up Buttons -->
+            <div
+                class="flex
+                    gap-4">
+
+                <a href="log_in.html">
+                    <button
+                        class="px-4
+                            py-2
+                            rounded-lg
+                            bg-blue-500
+                            text-white">
+                        Log In
+                    </button>   
+                </a>
+
+                <a href="sign_up.html">
+                    <button
+                        class="px-4
+                            py-2
+                            rounded-lg
+                            bg-blue-500
+                            text-white">
+                        Sign Up
+                    </button>
+                </a>
+
+            </div>
+        </header>
+
+    <!-- Movie Details Container -->
+    <div id="movie-details-container" class="w-9/12 p-8 my-8 mx-auto">
+        <!-- Movie details will be injected here by JavaScript -->
+    </div>
+
+    <script src="movies.js"></script>
+</body>
+</html>
