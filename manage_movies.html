@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html
+    lang="en">
+
+    <head>
+        <!-- Meta Tags -->
+        <meta
+            charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, 
+            initial-scale=1.0">
+
+        <!-- Title Tag -->
+        <title>
+            Manage Movies
+        </title>
+
+        <!-- Linking Tailwind CSS output file -->
+        <link
+            href="style.css"
+            rel="stylesheet">
+
+
+        <style>
+
+            .hidden {
+                display: none;
+            }
+
+            .active-tab {
+                background-color: #2563eb;
+                color: white;
+            }
+            .inactive-tab {
+                background-color: #e5e7eb;
+                color: #4b5563;
+            }
+        </style>
+
+    </head>
+
+    <body
+        class="min-h-screen
+            bg-gray-100">
+
+        <!-- Dashboard Container -->
+        <div 
+            class="flex h-screen">
+
+            <!-- Sidebar Navigation -->
+            <aside
+                class="w-1/7
+                    bg-white
+                    shadow-lg">
+
+                <div
+                    class="p-6">
+
+                    <a href="admin_view.html">
+                        <h1
+                            class="text-2xl
+                                font-bold
+                                text-gray-800">
+                            Admin Dashboard
+                        </h1>
+                    </a>
+
+                    <nav
+                        class="mt-10">
+
+                        <ul>
+
+                            <li>
+                            <a
+                                href="manage_movies.html"
+                                class="block py-2.5
+                                px-4
+                                rounded
+                                transition
+                                duration-200
+                                hover:bg-blue-500
+                                hover:text-white">
+                                🎬 Movie Management
+                            </a>
+                            </li>
+
+                            <li>
+                            <a
+                                href="manage_users.html"
+                                class="block py-2.5
+                                px-4
+                                rounded
+                                transition
+                                duration-200
+                                hover:bg-blue-500
+                                hover:text-white">
+                                👥 User Management
+                            </a>
+                            </li>
+
+                            <li>
+                            <a
+                                href="manage_promotions.html"
+                                class="block py-2.5
+                                px-4
+                                rounded
+                                transition
+                                duration-200
+                                hover:bg-blue-500
+                                hover:text-white">
+                                📢 Promotion Management
+                            </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </aside>
+
+            <div class="flex-1
+                flex
+                flex-col">
+
+                <!-- Navigation Tabs -->
+                <div
+                    class="bg-white
+                        py-2">
+
+                    <div
+                        class="max-w-7xl
+                            mx-auto
+                            flex
+                            justify-center
+                            space-x-8">
+
+                        <button
+                            id="now-playing-tab"
+                            class="tab-button
+                                active-tab
+                                py-2
+                                px-4
+                                rounded-lg">
+                            Movies List
+                        </button>
+
+                        <button
+                            id="coming-soon-tab"
+                            class="tab-button
+                                inactive-tab
+                                py-2
+                                px-4
+                                rounded-lg">
+                            Manage Movies
+                        </button>
+
+                    </div>
+                </div>
+
+                <section
+                    id="now-playing-section"
+                    class="w-full
+                        p-6
+                        mt-6">
+
+                    <div
+                        class="bg-white
+                            shadow-lg
+                            rounded-lg
+                            p-6">
+
+                        <table
+                            class="w-full
+                                table-auto">
+
+                            <thead
+                                class="bg-gray-100">
+
+                                <tr>
+                                    <th class="py-3
+                                        px-4
+                                        text-left
+                                        text-lg">
+                                        Title
+                                    </th>
+
+                                    <th class="py-3
+                                        px-4
+                                        text-left
+                                        text-lg">
+                                        Image
+                                    </th>
+
+                                    <th class="py-3
+                                        px-4
+                                        text-left
+                                        text-lg">
+                                        Trailer
+                                    </th>
+
+                                    <th class="py-3
+                                        px-4
+                                        text-left
+                                        text-lg">
+                                        Screen
+                                    </th>
+
+                                    <th class="py-3
+                                        px-4
+                                        text-left
+                                        text-lg">
+                                        Showtime
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        class="border-t
+                                            py-3
+                                            px-4">
+                                        Movie 1
+                                    </td>
+
+                                    <td 
+                                        class="border-t
+                                            py-3
+                                            px-4">
+                                        <img
+                                            src="https://via.placeholder.com/50"
+                                            alt="Movie Image"
+                                            class="rounded-lg">
+                                    </td>
+
+                                    <td
+                                        class="border-t
+                                            py-3
+                                            px-4">
+                                        <a href="#" class="text-blue-500">
+                                            Watch Trailer
+                                        </a>
+                                    </td>
+
+                                    <td
+                                        class="border-t
+                                            py-3
+                                            px-4">
+                                        Screen 3
+                                    </td>
+
+                                    <td
+                                        class="border-t
+                                            py-3
+                                            px-4">
+                                        7:00 PM
+                                    </td>
+
+                                </tr>
+
+                                <!-- More movie rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section
+                    id="coming-soon-section">
+
+                        <!-- Content Grid Section -->
+                        <section
+                            class="max-w-7xl
+                                mx-auto
+                                mt-6
+                                grid
+                                grid-cols-1
+                                md:grid-cols-2
+                                gap-6">
+
+                            <!-- Left Side: Add Movie Section -->
+                            <div
+                                class="bg-white
+                                    shadow-lg
+                                    rounded-lg
+                                    p-6">
+
+                                <h2
+                                    class="text-xl
+                                        font-bold
+                                        mb-4">
+                                    Add New Movie
+                                </h2>
+
+                                <form
+                                    action="#"
+                                    class="grid
+                                        grid-cols-1
+                                        gap-6">
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Title
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Description
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Category
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Cast
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Director
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Producer
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <div>
+                                        <label
+                                            class="block
+                                                text-gray-700
+                                                mb-1">
+                                            Rating
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        class="bg-blue-600
+                                            text-white
+                                            py-2
+                                            px-4
+                                            rounded-lg">
+                                        Submit
+                                    </button>
+
+                                </form>
+                            </div>
+
+                            <!-- Right Side: Manage Movie and Manage Show Sections -->
+                            <div   
+                                class="space-y-6">
+
+                                <!-- Manage Movie Section -->
+                                <div
+                                    class="bg-white
+                                        shadow-lg
+                                        rounded-lg
+                                        p-6">
+
+                                    <h2
+                                        class="text-xl
+                                            font-bold
+                                            mb-4">
+                                        Manage Movie
+                                    </h2>
+
+                                    <form
+                                        action="#"
+                                        class="grid
+                                            grid-cols-1
+                                            gap-6">
+
+                                        <div>
+                                            <label
+                                                class="block
+                                                    text-gray-700
+                                                    mb-1">
+                                                Select a Movie
+                                            </label>
+
+                                            <select
+                                                class="w-full
+                                                    border
+                                                    border-gray-300
+                                                    p-2
+                                                    rounded-lg">
+                                                    
+                                                <option>
+                                                    Movie 1
+                                                </option>
+                                                <option>
+                                                    Movie 2
+                                                </option>
+
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="block
+                                                    text-gray-700
+                                                    mb-1">
+                                                Trailer Link
+                                            </label>
+
+                                            <input
+                                                type="text"
+                                                class="w-full
+                                                    border
+                                                    border-gray-300
+                                                    p-2
+                                                    rounded-lg">
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="block
+                                                    text-gray-700
+                                                    mb-1">
+                                                Movie Poster
+                                            </label>
+
+                                            <input
+                                                type="file"
+                                                class="w-full
+                                                    border
+                                                    border-gray-300
+                                                    p-2
+                                                    rounded-lg">
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            class="bg-blue-600
+                                                text-white
+                                                py-2
+                                                px-4
+                                                rounded-lg">
+                                            Submit
+                                        </button>
+
+                                    </form>
+                                </div>
+
+                                <!-- Manage Shows Section -->
+                                <div
+                                    class="bg-white
+                                        shadow-lg
+                                        rounded-lg
+                                        p-6">
+
+                                    <h2
+                                        class="text-xl
+                                            font-bold
+                                            mb-4">
+                                        Manage Shows
+                                    </h2>
+
+                                    <form
+                                        action="#"
+                                        class="grid
+                                            grid-cols-1
+                                            md:grid-cols-2
+                                            gap-6">
+
+                                        <div>
+                                            <label
+                                                class="block
+                                                    text-gray-700
+                                                    mb-1">
+                                                Select a Movie
+                                            </label>
+
+                                            <select
+                                                class="w-full
+                                                    border
+                                                    border-gray-300
+                                                    p-2
+                                                    rounded-lg">
+
+                                                <option>
+                                                    Movie 1
+                                                </option>
+                                                <option>
+                                                    Movie 2
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="block
+                                                    text-gray-700
+                                                    mb-1">
+                                                Select a Date
+                                            </label>
+
+                                            <input
+                                                type="time"
+                                                class="w-full
+                                                    border
+                                                    border-gray-300
+                                                    p-2
+                                                    rounded-lg">
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="block
+                                                    text-gray-700
+                                                    mb-1">
+                                                Select a Time
+                                            </label>
+
+                                            <input
+                                                type="time"
+                                                class="w-full
+                                                    border
+                                                    border-gray-300
+                                                    p-2
+                                                    rounded-lg">
+                                        </div>
+
+                                        <button
+                                            type="submit" 
+                                            class="md:col-span-2
+                                                bg-blue-600
+                                                text-white
+                                                py-2
+                                                px-4
+                                                rounded-lg">
+                                            Submit
+                                        </button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+
+                </section>
+
+
+
+            </div>
+
+        </div>
+
+        <!-- JavaScript for Tab Navigation -->
+        <script>
+            // Grabbing elements
+            const nowPlayingTab = document.getElementById('now-playing-tab');
+            const comingSoonTab = document.getElementById('coming-soon-tab');
+            const nowPlayingSection = document.getElementById('now-playing-section');
+            const comingSoonSection = document.getElementById('coming-soon-section');
+
+            // Function to switch tabs
+            function switchTab(tab) {
+                if (tab === 'now-playing') {
+                    nowPlayingTab.classList.add('active-tab');
+                    nowPlayingTab.classList.remove('inactive-tab');
+                    comingSoonTab.classList.remove('active-tab');
+                    comingSoonTab.classList.add('inactive-tab');
+
+                    nowPlayingSection.classList.remove('hidden');
+                    comingSoonSection.classList.add('hidden');
+                } else {
+                    comingSoonTab.classList.add('active-tab');
+                    comingSoonTab.classList.remove('inactive-tab');
+                    nowPlayingTab.classList.remove('active-tab');
+                    nowPlayingTab.classList.add('inactive-tab');
+
+                    comingSoonSection.classList.remove('hidden');
+                    nowPlayingSection.classList.add('hidden');
+                }
+            }
+
+            // event listeners to tabs
+            nowPlayingTab.addEventListener('click', () => switchTab('now-playing'));
+            comingSoonTab.addEventListener('click', () => switchTab('coming-soon'));
+
+            // pre-select "Now Playing" section on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                switchTab('now-playing');
+            });
+        </script>
+
+
+
+    </body>
+</html>

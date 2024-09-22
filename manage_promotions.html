@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html
+    lang="en">
+
+    <head>
+        <!-- Meta Tags -->
+        <meta
+            charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, 
+            initial-scale=1.0">
+
+        <!-- Title Tag -->
+        <title>
+            Manage Movies
+        </title>
+
+        <!-- Linking Tailwind CSS output file -->
+        <link
+            href="style.css"
+            rel="stylesheet">
+
+    </head>
+
+    <body
+        class="min-h-screen
+            bg-gray-100">
+
+        <!-- Dashboard Container -->
+        <div 
+        class="flex h-screen">
+
+            <!-- Sidebar Navigation -->
+            <aside
+                class="w-1/7
+                    bg-white
+                    shadow-lg">
+
+                <div
+                    class="p-6">
+
+                    <a href="admin_view.html">
+                        <h1
+                            class="text-2xl
+                                font-bold
+                                text-gray-800">
+                            Admin Dashboard
+                        </h1>
+                    </a>
+
+                    <nav
+                        class="mt-10">
+
+                        <ul>
+
+                            <li>
+                            <a
+                                href="manage_movies.html"
+                                class="block py-2.5
+                                px-4
+                                rounded
+                                transition
+                                duration-200
+                                hover:bg-blue-500
+                                hover:text-white">
+                                🎬 Movie Management
+                            </a>
+                            </li>
+
+                            <li>
+                            <a
+                                href="manage_users.html"
+                                class="block py-2.5
+                                px-4
+                                rounded
+                                transition
+                                duration-200
+                                hover:bg-blue-500
+                                hover:text-white">
+                                👥 User Management
+                            </a>
+                            </li>
+
+                            <li>
+                            <a
+                                href="manage_promotions.html"
+                                class="block py-2.5
+                                px-4
+                                rounded
+                                transition
+                                duration-200
+                                hover:bg-blue-500
+                                hover:text-white">
+                                📢 Promotion Management
+                            </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </aside>
+
+            <div
+                class="flex-1
+                    flex
+                    flex-col">
+
+
+                <!-- Promotion Management Section -->
+                <section
+                    class="w-full
+                        p-6
+                        mt-6">
+
+                    <div
+                        class="bg-white
+                            shadow-lg
+                            rounded-lg
+                            p-6">
+
+                        <h2
+                            class="text-2xl
+                                font-bold
+                                mb-4">
+                            Promotion Management
+                        </h2>
+
+                        <!-- Current Promotions Table -->
+                        <div
+                            class="mb-6">
+
+                            <h3
+                                class="text-xl
+                                    font-semibold
+                                    mb-2">
+                                Current Promotions
+                            </h3>
+
+                            <table
+                                class="w-full
+                                    table-auto">
+
+                                <thead
+                                    class="bg-gray-100">
+
+                                    <tr>
+                                        <th
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            Promotion ID
+                                        </th>
+
+                                        <th
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            Description
+                                        </th>
+
+                                        <th
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            Start Date
+                                        </th>
+
+                                        <th
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            End Date
+                                        </th>
+
+                                        <th
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            Actions
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td
+                                            class="border-t
+                                                py-2
+                                                px-4">
+                                            1
+                                        </td>
+
+                                        <td
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            50% Off All Tickets
+                                        </td>
+
+                                        <td
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            2024-09-01
+                                        </td>
+
+                                        <td
+                                            class="py-2
+                                                px-4
+                                                text-left">
+                                            2024-09-30
+                                        </td>
+
+                                        <td
+                                            class="border-t
+                                                py-2
+                                                px-4">
+
+                                            <button
+                                                class="text-blue-500">
+                                                Delete
+                                            </button>
+                                            
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- More promotion rows -->
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                        <!-- Add New Promotion Form -->
+                        <h3
+                            class="text-xl
+                                font-semibold mb-4">
+                            Add New Promotion
+                        </h3>
+
+                        <form
+                            action="#"
+                            class="grid
+                                grid-cols-1
+                                gap-6">
+
+                            <div>
+
+                                <label
+                                    class="block
+                                        text-gray-700
+                                        mb-1">
+                                    Description
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="w-full
+                                        border
+                                        border-gray-300
+                                        p-2
+                                        rounded-lg"
+                                    required>
+
+                            </div>
+                            
+                            <div>
+
+                                <label
+                                    class="block
+                                        text-gray-700
+                                        mb-1">
+                                    Start Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="w-full border
+                                        border-gray-300
+                                        p-2
+                                        rounded-lg"
+                                    required>
+
+                            </div>
+
+                            <div>
+
+                                <label
+                                    class="block
+                                        text-gray-700
+                                        mb-1">
+                                    End Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="w-full
+                                        border
+                                        border-gray-300
+                                        p-2
+                                        rounded-lg"
+                                    required>
+
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="bg-blue-600
+                                    text-white
+                                    py-2
+                                    px-4
+                                    rounded-lg">
+                                Add Promotion
+                            </button>
+
+                        </form>
+
+                        <!-- Send Promotion Section -->
+                        <h3
+                            class="text-xl
+                                mt-6
+                                font-semibold
+                                mb-4">
+                            Send Promotion
+                        </h3>
+
+                        <form
+                            action="#"
+                            class="grid
+                                grid-cols-1
+                                gap-6">
+
+
+                            <div>
+
+                                <label
+                                    class="block
+                                        text-gray-700
+                                        mb-1">
+                                    Select Promotion
+                                </label>
+
+                                <select
+                                    class="w-full
+                                        border
+                                        border-gray-300
+                                        p-2
+                                        rounded-lg"
+                                        required>
+
+                                    <option>
+                                        Select a promotion
+                                    </option>
+
+                                    <option>
+                                        50% Off All Tickets
+                                    </option>
+
+                                    <!-- More options -->
+
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="bg-blue-600
+                                    text-white
+                                    py-2
+                                    px-4
+                                    rounded-lg">
+                                Send Promotion
+                            </button>
+
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </body>
+</html>
