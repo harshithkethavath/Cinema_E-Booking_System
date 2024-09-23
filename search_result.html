@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html
+    lang="en-US">
+
+    <head>
+        <!-- Meta Tags -->
+        <meta
+            charset="UTF-8">
+        <meta 
+            name="viewport" 
+            content="width=device-width">
+
+        <!-- Icon Meta Tag -->
+        <link
+            rel="icon"
+            href="icon.png"
+            sizes="32x32"
+            type="image/png">
+
+        <!-- Title Tag -->
+        <title>
+            Book My Ticket
+        </title>
+
+        <!-- Linking Tailwind CSS output file -->
+        <link 
+            href="style.css"
+            rel="stylesheet">
+
+        <style>
+            .hover\:shadow-xl:hover {
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
+    </head>
+
+    <body
+        class="bg-gray-100">        
+        <!-- Navigation Bar -->
+        <header 
+            class="p-5 
+                bg-white
+                flex
+                justify-between
+                items-center">
+
+            <!-- BOOK MY TICKET logo and text -->
+            <div 
+                class="flex
+                    gap-2">
+
+                <div>
+                    <img 
+                        src="icon.png"
+                        alt="Ticket Symbol for Webpage"
+                        width="32"
+                        height="32">
+                </div>
+
+                <a href="index.html">
+                    <div
+                        class="text-blue-500
+                        text-2xl
+                        font-bold">
+                        <span>
+                            BOOK MY TICKET
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Search Box, Log In and Sign Up Buttons -->
+            <div
+                class="flex
+                    gap-4">
+                
+                <input
+                    type="text"
+                    placeholder="Search for Movies"
+                    class="border
+                        px-4
+                        py-2
+                        rounded-lg">
+
+                <a href="log_in.html">
+                    <button
+                        class="px-4
+                            py-2
+                            rounded-lg
+                            bg-blue-500
+                            text-white">
+                        Log In
+                    </button>   
+                </a>
+
+                <a href="sign_up.html">
+                    <button
+                        class="px-4
+                            py-2
+                            rounded-lg
+                            bg-blue-500
+                            text-white">
+                        Sign Up
+                    </button>
+                </a>
+
+            </div>
+        </header>
+
+        <!-- Movie Section -->
+        <section
+            class="my-12
+                max-w-6xl
+                mx-auto">
+
+            <div
+                class="mb-4">
+
+                <!-- Movie Cards -->
+                <div
+                    class="grid
+                        grid-cols-1
+                        md:grid-cols-2
+                        lg:grid-cols-4
+                        gap-6"
+                    id="playing-carousel">
+                    
+                    <div
+                        class="bg-white
+                            p-4
+                            rounded-lg
+                            shadow">
+
+                        <img
+                            src="https://via.placeholder.com/200x300?text=Title"
+                            alt="title"
+                            class="w-full
+                                rounded-lg
+                                mb-2">
+                        
+                        <h3
+                            class="font-bold
+                                text-base">
+                            Title
+                        </h3>
+
+                        <p
+                            class="text-sm
+                                text-gray-500">
+                            description    
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </body>
+
+</html>
