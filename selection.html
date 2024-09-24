@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html
+    lang="en">
+
+    <head>
+        <!-- Meta Tags -->
+        <meta
+            charset="UTF-8">
+
+        <!-- Icon Meta Tag -->
+        <link
+            rel="icon"
+            href="icon.png"
+            sizes="32x32"
+            type="image/png">
+
+        <!-- Title Tag -->
+        <title>
+            Select Seats
+        </title>
+
+        <!-- Linking Tailwind CSS output file -->
+        <link 
+            href="style.css"
+            rel="stylesheet">
+
+        <style>
+            .seat {
+                width: 32px;
+                height: 32px;
+                margin: 2px;
+                cursor: pointer;
+            }
+
+            .available {
+                background-color: gray;
+            }
+
+            .selected {
+                background-color: green;
+            }
+
+            .occupied {
+                background-color: black;
+                cursor: not-allowed;
+            }
+
+            .screen {
+                grid-column: span 10;
+                background-color: lightgray;
+                text-align: center;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body
+        class="bg-gray-100">
+
+        <!-- Header -->
+        <header
+            class="p-5
+                bg-white
+                flex
+                justify-between
+                items-center
+                shadow">
+
+            <div
+                class="flex gap-2">
+
+                <img
+                    src="icon.png"
+                    alt="Ticket Symbol"
+                    width="32"
+                    height="32">
+
+                <div
+                    class="text-blue-500
+                        text-2xl
+                        font-bold">
+                    BOOK MY TICKET
+                </div>
+
+            </div>
+
+            <div
+                class="flex gap-4">
+
+                <a
+                    href="log_in.html">
+
+                    <button
+                        class="px-4
+                            py-2
+                            rounded-lg
+                            bg-blue-500
+                            text-white">
+                        Log In
+                    </button>
+                </a>
+
+                <a
+                    href="sign_up.html">
+
+                    <button
+                        class="px-4
+                            py-2
+                            rounded-lg
+                            bg-blue-500
+                            text-white">
+                        Sign Up
+                    </button>
+                </a>
+
+            </div>
+
+        </header>
+
+        <!-- Seat Selection Section -->
+        <section
+            class="max-w-6xl
+                mx-auto
+                p-8
+                mt-6
+                bg-white
+                rounded-lg
+                shadow-lg">
+
+            <div
+                class="grid
+                    grid-cols-2
+                    gap-8">
+
+                <!-- Movie Info and Seat Selector -->
+                <div>
+
+                    <h2
+                        class="text-3xl
+                            font-bold
+                            mb-4">
+                        Movie Title
+                    </h2>
+
+                    <!-- Select Date and Show Time -->
+
+                    <div
+                        class="mb-4">
+                        <p
+                            class="text-lg
+                                font-semibold">
+                            Select Date :
+                        </p>
+
+                        <div
+                            class="flex gap-4">
+
+                            <button
+                                class="px-4
+                                    py-2
+                                    rounded-full
+                                    border
+                                    border-gray-400">
+                                09/24/2024
+                            </button>
+
+                            <button
+                                class="px-4
+                                    py-2
+                                    rounded-full
+                                    border
+                                    border-gray-400">
+                                09/25/2024
+                            </button>
+
+                            <button
+                                class="px-4
+                                    py-2
+                                    rounded-full
+                                    bg-blue-500
+                                    text-white">
+                                09/26/2024
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="mb-4">
+
+                        <p
+                            class="text-lg
+                                font-semibold">
+                            Select Show Time :
+                        </p>
+
+                        <div class="flex gap-4">
+
+                            <button
+                                class="px-4
+                                    py-2
+                                    rounded-full
+                                    border
+                                    border-gray-400">
+                                8:00 am
+                            </button>
+
+                            <button
+                                class="px-4
+                                    py-2
+                                    rounded-full
+                                    border
+                                    border-gray-400">
+                                11:00 am
+                            </button>
+
+                            <button
+                                class="px-4
+                                    py-2
+                                    rounded-full
+                                    bg-blue-500
+                                    text-white">
+                                2:20 pm
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Seat Selection -->
+                    <div
+                        class="mb-6">
+
+                        <p
+                            class="text-lg
+                                font-semibold">
+                            Select Your Seats :
+                        </p>
+
+                        <div
+                            class="flex
+                                items-center
+                                gap-4
+                                mb-2">
+
+                            <div
+                                class="flex
+                                    items-center
+                                    gap-1">
+
+                                <div
+                                    class="w-4
+                                    h-4
+                                    bg-green-500"></div>
+
+                                <span>
+                                    Selected
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex
+                                    items-center
+                                    gap-1">
+
+                                <div
+                                    class="w-4
+                                    h-4
+                                    bg-gray-300"></div>
+
+                                <span>
+                                    Available
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="flex
+                                    items-center
+                                    gap-1">
+
+                                <div
+                                    class="w-4
+                                        h-4 
+                                        bg-black"></div>
+
+                                <span>
+                                    Occupied
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!-- Seat Map -->
+                        <div
+                            class="grid
+                                grid-cols-10
+                                gap-1
+                                justify-center mb-4"
+                            id="seat-map">
+
+                            <div
+                                class="screen">
+                                Screen
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Selection Summary -->
+                <div
+                    class="bg-gray-50
+                        p-4
+                        rounded-lg">
+
+                    <h3
+                        class="text-2xl
+                            font-bold
+                            mb-4">
+                        You have Selected :
+                    </h3>
+
+                    <div class="mb-2">
+
+                        <p>Adult Tickets ($6) : 
+
+                            <input
+                                id="adult-count"
+                                type="number"
+                                min="0"
+                                value="0"
+                                class="w-12
+                                    border
+                                    px-1"
+                                onchange="updateTicketCounts()">
+                        </p>
+                    </div>
+
+
+                    <div class="mb-2">
+
+                        <p>Child Tickets ($4) : 
+
+                            <input
+                                id="child-count"
+                                type="number"
+                                min="0"
+                                value="0"
+                                class="w-12
+                                    border
+                                    px-1"
+                                onchange="updateTicketCounts()">
+
+                        </p>
+                    </div>
+
+
+                    <div class="mb-2">
+
+                        <p>Senior Tickets ($4) : 
+
+                            <input
+                                id="senior-count"
+                                type="number"
+                                min="0"
+                                value="0"
+                                class="w-12
+                                    border
+                                    px-1"
+                                onchange="updateTicketCounts()">
+
+                        </p>
+                    </div>
+
+                    <div
+                        class="mt-6">
+
+                        <p
+                            class="text-xl
+                                font-bold">
+                            Total Price : $<span
+                                                id="total-price"
+                                                class="text-green-600">
+                                                0
+                                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Next Button -->
+            <div
+                class="flex
+                    justify-end
+                    mt-8">
+
+                <button
+                    class="bg-blue-500
+                        text-white
+                        py-2
+                        px-6
+                        rounded-lg
+                        nxt-btn">
+                    Next
+                </button>
+
+            </div>
+        </section>
+
+        <script>
+            const seatMap = document.getElementById('seat-map');
+            const totalPriceEl = document.getElementById('total-price');
+            const adultCountEl = document.getElementById('adult-count');
+            const childCountEl = document.getElementById('child-count');
+            const seniorCountEl = document.getElementById('senior-count');
+            const nextButton = document.querySelector('.nxt-btn'); // Next button
+        
+            const seatPrices = {
+                adult: 6,
+                child: 4,
+                senior: 4
+            };
+        
+            let selectedSeats = 0;
+            let totalPrice = 0;
+        
+            // Seat layout as an array of objects (1 for available, 0 for occupied)
+            const seats = [
+                [1, 1, 1, 0, 0, 1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 1, 1, 1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 0, 0, 1, 1, 1, 1]
+            ];
+        
+            // Function to render seats
+            function renderSeats() {
+                seats.forEach(row => {
+                    row.forEach(seatStatus => {
+                        const seat = document.createElement('div');
+                        seat.classList.add('seat');
+                        if (seatStatus === 1) {
+                            seat.classList.add('available');
+                            seat.addEventListener('click', () => selectSeat(seat));
+                        } else {
+                            seat.classList.add('occupied');
+                        }
+                        seatMap.appendChild(seat);
+                    });
+                });
+            }
+        
+            // Function to handle seat selection
+            function selectSeat(seat) {
+                if (seat.classList.contains('selected')) {
+                    seat.classList.remove('selected');
+                    seat.classList.add('available');
+                    selectedSeats--;
+                } else {
+                    seat.classList.remove('available');
+                    seat.classList.add('selected');
+                    selectedSeats++;
+                }
+                updateTicketCounts(); // Update counts and validate
+            }
+        
+            // Function to update ticket counts and total price
+            function updateTicketCounts() {
+                const adultCount = parseInt(adultCountEl.value) || 0;
+                const childCount = parseInt(childCountEl.value) || 0;
+                const seniorCount = parseInt(seniorCountEl.value) || 0;
+        
+                const totalSelectedSeats = adultCount + childCount + seniorCount;
+        
+                // Validate if the total selected seats match the count of tickets
+                if (totalSelectedSeats > selectedSeats) {
+                    alert("You can't select more tickets than the selected seats!");
+                }
+        
+                // Update total price
+                totalPrice = (adultCount * seatPrices.adult) + (childCount * seatPrices.child) + (seniorCount * seatPrices.senior);
+                totalPriceEl.textContent = totalPrice;
+        
+                validateSeatAndTicketCount(); // Trigger validation after updating
+            }
+        
+            // Function to validate if selected seats match ticket counts
+            function validateSeatAndTicketCount() {
+                const adultCount = parseInt(adultCountEl.value) || 0;
+                const childCount = parseInt(childCountEl.value) || 0;
+                const seniorCount = parseInt(seniorCountEl.value) || 0;
+        
+                const totalTickets = adultCount + childCount + seniorCount;
+        
+                // Compare total selected seats with the total tickets count
+                if (selectedSeats === totalTickets && totalTickets > 0) {
+                    nextButton.disabled = false; // Enable the "Next" button if valid
+                    nextButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                } else {
+                    nextButton.disabled = true; // Disable the "Next" button if invalid
+                    nextButton.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+            }
+        
+            // Disable the button by default until seats and ticket count match
+            nextButton.disabled = true;
+            nextButton.classList.add('opacity-50', 'cursor-not-allowed');
+        
+            // Initial render
+            renderSeats();
+        </script>
+
+    </body>
+
+</html>
