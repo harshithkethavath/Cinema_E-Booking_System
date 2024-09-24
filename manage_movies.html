@@ -717,38 +717,41 @@
 
         </div>
 
-        <!-- JavaScript for Tab Navigation -->
+        <!-- JavaScript for taab Navigation -->
         <script>
-            // Grabbing elements
-            const nowPlayingTab = document.getElementById('now-playing-tab');
-            const comingSoonTab = document.getElementById('coming-soon-tab');
-            const nowPlayingSection = document.getElementById('now-playing-section');
-            const comingSoonSection = document.getElementById('coming-soon-section');
 
-            // Function to switch tabs
+            const nowPlayTab = document.getElementById('now-playing-tab');
+
+            const comingTab = document.getElementById('coming-soon-tab');
+
+            const nowPlaySection = document.getElementById('now-playing-section');
+
+            const comingSection = document.getElementById('coming-soon-section');
+
+            // Function for switchnig tabs
             function switchTab(tab) {
                 if (tab === 'now-playing') {
-                    nowPlayingTab.classList.add('active-tab');
-                    nowPlayingTab.classList.remove('inactive-tab');
-                    comingSoonTab.classList.remove('active-tab');
-                    comingSoonTab.classList.add('inactive-tab');
+                    nowPlayTab.classList.add('active-tab');
+                    nowPlayTab.classList.remove('inactive-tab');
+                    comingTab.classList.remove('active-tab');
+                    comingTab.classList.add('inactive-tab');
 
-                    nowPlayingSection.classList.remove('hidden');
-                    comingSoonSection.classList.add('hidden');
+                    nowPlaySection.classList.remove('hidden');
+                    comingSection.classList.add('hidden');
                 } else {
-                    comingSoonTab.classList.add('active-tab');
-                    comingSoonTab.classList.remove('inactive-tab');
-                    nowPlayingTab.classList.remove('active-tab');
-                    nowPlayingTab.classList.add('inactive-tab');
+                    comingTab.classList.add('active-tab');
+                    comingTab.classList.remove('inactive-tab');
+                    nowPlayTab.classList.remove('active-tab');
+                    nowPlayTab.classList.add('inactive-tab');
 
-                    comingSoonSection.classList.remove('hidden');
-                    nowPlayingSection.classList.add('hidden');
+                    comingSection.classList.remove('hidden');
+                    nowPlayiSection.classList.add('hidden');
                 }
             }
 
             // event listeners to tabs
-            nowPlayingTab.addEventListener('click', () => switchTab('now-playing'));
-            comingSoonTab.addEventListener('click', () => switchTab('coming-soon'));
+            nowPlayTab.addEventListener('click', () => switchTab('now-playing'));
+            comingTab.addEventListener('click', () => switchTab('coming-soon'));
 
             // pre-select "Now Playing" section on page load
             document.addEventListener('DOMContentLoaded', () => {

@@ -413,12 +413,28 @@
         </section>
 
         <script>
-            const seatMap = document.getElementById('seat-map');
-            const totalPriceEl = document.getElementById('total-price');
-            const adultCountEl = document.getElementById('adult-count');
-            const childCountEl = document.getElementById('child-count');
-            const seniorCountEl = document.getElementById('senior-count');
-            const nextButton = document.querySelector('.nxt-btn'); // Next button
+            const seatMap =
+                document.getElementById('seat-map');
+
+
+            const totalPrices =
+                document.getElementById('total-price');
+
+
+            const adultCounts =
+                document.getElementById('adult-count');
+
+
+            const childCounts =
+                document.getElementById('child-count');
+
+
+            const seniorCounts =
+                document.getElementById('senior-count');
+
+
+            const nextButton =
+                document.querySelector('.nxt-btn'); // Next button
         
             const seatPrices = {
                 adult: 6,
@@ -431,26 +447,36 @@
         
             // Seat layout as an array of objects (1 for available, 0 for occupied)
             const seats = [
-                [1, 1, 1, 0, 0, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                [1, 0, 0, 1, 1, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 0, 0, 1, 1, 1, 1]
+                [1,1,1, 0, 0,1, 1,1, 1, 1],
+                [1, 1,1,1, 1, 1,1, 1,1,1],
+                [1, 0, 0,1, 1,1, 1,1,1, 1],
+                [1,1, 1,1, 1, 1,1, 1,1,1],
+                [1, 1,1, 1, 0,0, 1, 1,1, 1]
             ];
         
             // Function to render seats
             function renderSeats() {
+
                 seats.forEach(row => {
+
                     row.forEach(seatStatus => {
-                        const seat = document.createElement('div');
+
+                        const seat =
+                            document.createElement('div');
+
                         seat.classList.add('seat');
+
                         if (seatStatus === 1) {
                             seat.classList.add('available');
+
                             seat.addEventListener('click', () => selectSeat(seat));
-                        } else {
+                        }
+
+                        else {
                             seat.classList.add('occupied');
                         }
                         seatMap.appendChild(seat);
+
                     });
                 });
             }
@@ -459,11 +485,17 @@
             function selectSeat(seat) {
                 if (seat.classList.contains('selected')) {
                     seat.classList.remove('selected');
+
                     seat.classList.add('available');
+
                     selectedSeats--;
-                } else {
+                }
+                
+                else {
                     seat.classList.remove('available');
+
                     seat.classList.add('selected');
+
                     selectedSeats++;
                 }
                 updateTicketCounts(); // Update counts and validate
@@ -471,11 +503,19 @@
         
             // Function to update ticket counts and total price
             function updateTicketCounts() {
-                const adultCount = parseInt(adultCountEl.value) || 0;
-                const childCount = parseInt(childCountEl.value) || 0;
-                const seniorCount = parseInt(seniorCountEl.value) || 0;
+                const adultCount =
+                    parseInt(adultCounts.value) || 0;
+
+                const childCount =
+                    parseInt(childCounts.value) || 0;
+                
+                const seniorCount =
+                    parseInt(seniorCounts.value) || 0;
         
-                const totalSelectedSeats = adultCount + childCount + seniorCount;
+                const totalSelectedSeats =
+                    adultCount +
+                    childCount +
+                    seniorCount;
         
                 // Validate if the total selected seats match the count of tickets
                 if (totalSelectedSeats > selectedSeats) {
@@ -483,35 +523,66 @@
                 }
         
                 // Update total price
-                totalPrice = (adultCount * seatPrices.adult) + (childCount * seatPrices.child) + (seniorCount * seatPrices.senior);
-                totalPriceEl.textContent = totalPrice;
+                totalPrice =
+                    (adultCount *
+                        seatPrices.adult) +
+                    (childCount *
+                        seatPrices.child) +
+                    (seniorCount *
+                        seatPrices.senior);
+
+                totalPrices.textContent =
+                    totalPrice;
         
-                validateSeatAndTicketCount(); // Trigger validation after updating
+                validateSeatAndTicketCount(); 
             }
         
-            // Function to validate if selected seats match ticket counts
+            // fnction to see if selected seats match ticket counts
             function validateSeatAndTicketCount() {
-                const adultCount = parseInt(adultCountEl.value) || 0;
-                const childCount = parseInt(childCountEl.value) || 0;
-                const seniorCount = parseInt(seniorCountEl.value) || 0;
+                const adultCount = 
+                    parseInt(adultCounts.value) || 0;
+
+                const childCount =
+                    parseInt(childCounts.value) || 0;
+
+                const seniorCount =
+                    parseInt(seniorCounts.value) || 0;
         
-                const totalTickets = adultCount + childCount + seniorCount;
+                const totalTickets =
+                    adultCount +
+                    childCount +
+                    seniorCount;
         
-                // Compare total selected seats with the total tickets count
-                if (selectedSeats === totalTickets && totalTickets > 0) {
-                    nextButton.disabled = false; // Enable the "Next" button if valid
-                    nextButton.classList.remove('opacity-50', 'cursor-not-allowed');
-                } else {
-                    nextButton.disabled = true; // Disable the "Next" button if invalid
-                    nextButton.classList.add('opacity-50', 'cursor-not-allowed');
+                //compaare total selected seats with the total tickest count
+                if (selectedSeats === 
+                        totalTickets && 
+                        totalTickets > 0) {
+
+                    nextButton.disabled =
+                        false; // Enableing the "Next" buttton if  valid
+                    nextButton.classList.remove(
+                                                    'opacity-50',
+                                                    'cursor-not-allowed');
+
+                }
+
+                else {
+                    nextButton.disabled =
+                        true; // Disablieng the "Next" button if invalid
+                    nextButton.classList.add(
+                                            'opacity-50',
+                                            'cursor-not-allowed');
                 }
             }
         
-            // Disable the button by default until seats and ticket count match
-            nextButton.disabled = true;
-            nextButton.classList.add('opacity-50', 'cursor-not-allowed');
+            // diisableing the button by default until seats and ticket count mathc
+            nextButton.disabled =
+                true;
+            nextButton.classList.add(
+                                'opacity-50',
+                                'cursor-not-allowed');
         
-            // Initial render
+            //  STArting render
             renderSeats();
         </script>
 
