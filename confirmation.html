@@ -32,8 +32,10 @@
                 const email = getParam('email');
                     
                 if (firstName && email) {
-                    document.getElementById('confirm-name').innerText = decodeURIComponent(firstName);
-                    document.getElementById('confirm-email').innerText = decodeURIComponent(email);
+                    document.getElementById('confirm-name').innerText =
+                        decodeURIComponent(firstName);
+                    document.getElementById('confirm-email').innerText =
+                        decodeURIComponent(email);
                 }
             }
         </script>
