@@ -228,6 +228,13 @@
                                         Price for above 18
                                     </th>
 
+                                    <th class="py-3
+                                        px-4
+                                        text-left
+                                        text-lg">
+                                        Price for above 60
+                                    </th>
+
                                 </tr>
 
                             </thead>
@@ -285,6 +292,13 @@
                                             py-3
                                             px-4">
                                         $10
+                                    </td>
+
+                                    <td
+                                        class="border-t
+                                            py-3
+                                            px-4">
+                                        $8
                                     </td>
 
                                 </tr>
@@ -480,8 +494,7 @@
                                         <div>
                                             <label
                                                 class="block
-                                                    text-gray-700
-                                                    mb-1">
+                                                    text-gray-700">
                                                 Select a Movie
                                             </label>
 
@@ -505,8 +518,7 @@
                                         <div>
                                             <label
                                                 class="block
-                                                    text-gray-700
-                                                    mb-1">
+                                                    text-gray-700">
                                                 Trailer Embed ID
                                             </label>
 
@@ -522,8 +534,7 @@
                                         <div>
                                             <label
                                                 class="block
-                                                    text-gray-700
-                                                    mb-1">
+                                                    text-gray-700">
                                                 Movie Poster
                                             </label>
 
@@ -569,68 +580,77 @@
                                             grid-cols-1
                                             md:grid-cols-2
                                             gap-6">
+                                        
+                                        <div
+                                            class="space-y-6">
 
-                                        <div>
-                                            <label
-                                                class="block
-                                                    text-gray-700
-                                                    mb-1">
-                                                Select a Movie
-                                            </label>
+                                            <div>
 
-                                            <select
-                                                class="w-full
-                                                    border
-                                                    border-gray-300
-                                                    p-2
-                                                    rounded-lg">
+                                                <label
+                                                    class="block
+                                                        text-gray-700">
+                                                    Select a Movie
+                                                </label>
 
-                                                <option>
-                                                    Movie 1
-                                                </option>
-                                                <option>
-                                                    Movie 2
-                                                </option>
+                                                <select
+                                                    class="w-full
+                                                        border
+                                                        border-gray-300
+                                                        p-2
+                                                        rounded-lg">
 
-                                            </select>
+                                                    <option>
+                                                        Movie 1
+                                                    </option>
+
+                                                    <option>
+                                                        Movie 2
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+                                            <div>
+
+                                                <label
+                                                    class="block
+                                                        text-gray-700">
+                                                    Select a Date
+                                                </label>
+
+                                                <input
+                                                    type="date"
+                                                    class="w-full
+                                                        border
+                                                        border-gray-300
+                                                        p-2
+                                                        rounded-lg">
+
+                                            </div>
+
+                                            <div>
+
+                                                <label
+                                                    class="block
+                                                        text-gray-700">
+                                                    Select a Time
+                                                </label>
+
+                                                <input
+                                                    type="time"
+                                                    class="w-full
+                                                        border
+                                                        border-gray-300
+                                                        p-2
+                                                        rounded-lg">
+
+                                            </div>
 
                                         </div>
 
                                         <div>
-                                            <label
-                                                class="block
-                                                    text-gray-700
-                                                    mb-1">
-                                                Select a Date
-                                            </label>
 
-                                            <input
-                                                type="date"
-                                                class="w-full
-                                                    border
-                                                    border-gray-300
-                                                    p-2
-                                                    rounded-lg">
-                                        </div>
-
-                                        <div>
-                                            <label
-                                                class="block
-                                                    text-gray-700
-                                                    mb-1">
-                                                Select a Time
-                                            </label>
-
-                                            <input
-                                                type="time"
-                                                class="w-full
-                                                    border
-                                                    border-gray-300
-                                                    p-2
-                                                    rounded-lg">
-                                        </div>
-
-                                        <div>
                                             <label
                                                 class="block
                                                     text-gray-700
@@ -641,36 +661,51 @@
                                             <input
                                                 type="text"
                                                 placeholder="Cost for below 18 years"
-                                                class="w-full
-                                                    border
+                                                class="w-full border
                                                     border-gray-300
                                                     p-2
+                                                    my-0.5
                                                     rounded-lg">
-                                            
+
                                             <input
                                                 type="text"
                                                 placeholder="Cost for above 18 years"
-                                                class="w-full
-                                                    border
+                                                class="w-full border
                                                     border-gray-300
                                                     p-2
-                                                    my-1
+                                                    my-0.5
                                                     rounded-lg">
+
+                                            <input
+                                                type="text"
+                                                placeholder="Cost for above 60 years"
+                                                class="w-full border
+                                                    border-gray-300
+                                                    p-2
+                                                    my-0.5
+                                                    rounded-lg">
+
                                         </div>
 
+                                        <!-- Submit Button Spanning Both Columns -->
                                         <button
-                                            type="submit" 
+                                            type="submit"
                                             class="md:col-span-2
-                                                bg-blue-600
+                                                bg-blue-600 
                                                 text-white
                                                 py-2
-                                                px-4
+                                                px-4 
                                                 rounded-lg">
+
                                             Submit
+
                                         </button>
 
                                     </form>
+
+
                                 </div>
+
                             </div>
                         </section>
 
