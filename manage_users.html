@@ -235,92 +235,261 @@
 
                         </div>
 
+                    <!-- Add User and Manage User Sections Side by Side -->
+                    <div
+                        class="grid
+                            grid-cols-1
+                            md:grid-cols-2
+                            gap-6">
+
                         <!-- Add User Form -->
-                        <h3
-                            class="text-xl
-                                font-semibold
-                                mb-4">
-                            Add New User
-                        </h3>
+                        <div>
+                            <h3
+                                class="text-xl
+                                    font-semibold
+                                    mb-4">
+                                Add New User
+                            </h3>
 
-                        <form
-                            action="#"
-                            class="grid
-                                grid-cols-1
-                                gap-6">
+                            <form
+                                action="#"
+                                class="grid
+                                    grid-cols-1
+                                    gap-6">
 
-                            <div>
-                                <label
-                                    class="block
-                                        text-gray-700
-                                        mb-1">
-                                    Name
-                                </label>
+                                <div>
 
-                                <input
-                                    type="text"
-                                    class="w-full
-                                        border
-                                        border-gray-300
-                                        p-2
-                                        rounded-lg"
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="w-full
+                                            border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg"
                                         required>
-                            </div>
 
-                            <div>
-                                <label
-                                    class="block
-                                        text-gray-700
-                                        mb-1">
-                                    Email
-                                </label>
+                                </div>
 
-                                <input
-                                    type="text"
-                                    class="w-full
-                                        border
-                                        border-gray-300
-                                        p-2
-                                        rounded-lg"
+                                <div>
+
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Email
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg"
                                         required>
-                            </div>
 
-                            <div>
-                                <label
-                                    class="block
-                                        text-gray-700
-                                        mb-1">
-                                    Role
-                                </label>
+                                </div>
 
-                                <select 
-                                    class="w-full border
-                                    border-gray-300
-                                    p-2
-                                    rounded-lg"
-                                    required>
+                                <div>
 
-                                    <option>
-                                        Admin
-                                    </option>
-                                    <option>
-                                        User
-                                    </option>
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Password
+                                    </label>
 
-                                </select>
-                            </div>
+                                    <input
+                                        type="password"
+                                        class="w-full border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg"
+                                        required>
 
-                            <button
-                                type="submit"
-                                class="bg-blue-600
-                                    text-white
-                                    py-2
-                                    px-4
-                                    rounded-lg">
-                                Add User
-                            </button>
+                                </div>
 
-                        </form>
+                                <div>
+
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Role
+                                    </label>
+
+                                    <select
+                                        class="w-full
+                                            border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg"
+                                        required>
+
+                                        <option>
+                                            Admin
+                                        </option>
+
+                                        <option>
+                                            User
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="bg-blue-600
+                                        text-white
+                                        py-2
+                                        px-4
+                                        rounded-lg">
+                                    Add User
+                                </button>
+
+                            </form>
+                        </div>
+
+                        <!-- Manage User Form -->
+                        <div>
+                            <h3
+                                class="text-xl
+                                    font-semibold
+                                    mb-4">
+                                Manage Existing User
+                            </h3>
+
+                            <form
+                                action="#"
+                                class="grid
+                                    grid-cols-1
+                                    gap-6">
+
+                                <div>
+
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Select User
+                                    </label>
+
+                                    <select
+                                        class="w-full
+                                            border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg"
+                                        id="userSelect"
+                                        required>
+
+                                        <option
+                                            value="1">
+                                            John Doe (john@example.com)
+                                        </option>
+
+                                        <option
+                                            value="2">
+                                            Jane Smith (jane@example.com)
+                                        </option>
+
+                                        <!-- More user options here -->
+                                    </select>
+
+                                </div>
+
+                                <div>
+
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Edit Email
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="editEmail"
+                                        class="w-full
+                                            border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+
+                                </div>
+
+                                <div>
+
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Edit Password
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="editPassword"
+                                        class="w-full
+                                            border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+
+                                </div>
+
+                                <div>
+
+                                    <label
+                                        class="block
+                                            text-gray-700
+                                            mb-1">
+                                        Edit Role
+                                    </label>
+
+                                    <select
+                                        id="editRole"
+                                        class="w-full
+                                            border
+                                            border-gray-300
+                                            p-2
+                                            rounded-lg">
+
+                                        <option>
+                                            Admin
+                                        </option>
+
+                                        <option>
+                                            User
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="bg-blue-600
+                                        text-white
+                                        py-2
+                                        px-4
+                                        rounded-lg">
+                                    Save Changes
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
                     </div>
                 </section>
 
